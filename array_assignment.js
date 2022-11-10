@@ -1,6 +1,7 @@
 console.log("Given Array:");
 var new_array = ["J&J", "Pfizer", "Sputnik"];
-console.log("[".concat(new_array, "]"));
+// console.log(`[${new_array}]`);
+console.log(new_array);
 new_array.push("Covaxin");
 console.log("Add one more element in given array : [".concat(new_array, "]"));
 console.log("Array traversing using for of loop");

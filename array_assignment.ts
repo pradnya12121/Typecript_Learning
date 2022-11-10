@@ -1,7 +1,7 @@
 console.log(`Given Array:`);
 let new_array=["J&J" ,"Pfizer","Sputnik"];
-console.log(`[${new_array}]`);
-
+// console.log(`[${new_array}]`);
+console.log(new_array);
 new_array.push("Covaxin");
 
 console.log(`Add one more element in given array : [${new_array}]`);
