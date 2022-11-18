@@ -10,7 +10,7 @@ interface Iswaiggy{
 }
 interface IfoodApp extends Izomato ,Iswaiggy {
     customer_name:string;
-    customer_email:string|number; 
+    customer_email:string; 
     customer_address:string;
     customer_phone:number;
 
@@ -24,4 +24,6 @@ var food:IfoodApp =
     customer_name:"Suresh",
     customer_email:"Suresg123@gmail.com",
     customer_phone:8907654321,
+    rating:5,
+    customer_address:"Mumbai",
 } 
