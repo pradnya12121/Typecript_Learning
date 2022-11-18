@@ -15,6 +15,7 @@ class Employee extends Person{
     }
 }
 class Trainer extends Person {
+    
     public work(){
         console.log("I am from trainer class")
     }
