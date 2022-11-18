@@ -4,14 +4,14 @@ class Calculator{
     num1:number;
     num2:number;
     num3:number;
-    constructor(num1,num2){
-        this.num1=num1;
-        this.num2=num2;
-        // this.num3=num3;
-    }
+    // constructor(num1,num2){
+    //     this.num1=num1;
+    //     this.num2=num2;
+    //     // this.num3=num3;
+    // }
     static getadd(num1:number,num2:number){
             return  num1+num2;
-            return num1*num2;
+            // return num1*num2;
         
         
     }
@@ -26,7 +26,7 @@ class Calculator{
     }
    
 }
-let calculator=new Calculator(6,7);
+let calculator=new Calculator();
 console.log("Addtion of Two number (6 + 7) :" + " " +Calculator.getadd(6,7))
 console.log("Multiplication of two number (3*7) :" + " " +Calculator.getmul(3,7))
 console.log("Substraction of two number (67 -7) :" + " " +Calculator.getsub(67,7))
