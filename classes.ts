@@ -2,6 +2,9 @@ interface IFlight {
     flightNo: number;
     from: string;
     to: string;
+    display():any;
+
+    
 
 }
 
