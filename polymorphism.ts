@@ -21,14 +21,15 @@ class Trainer extends Person {
     }
 }
 
-    let person=new Person();
-    let student=new Student1();
+ let person=new Person();
+     let student=new Student1();
     let employee=new Employee();
-    let trainer=new Trainer();
-    person.work();
-    student.work();
+     let trainer=new Trainer();
+     person.work();
+ student.work();
     employee.work();
     trainer.work();
+
 
 
 
