@@ -10,10 +10,15 @@ constructor(firstName: string, lastName:string, flightno:number)
     this.lastName = lastName;
     this.frequentFlyerno = flightno;
 }
+display (){
+    console.log(this.firstName + "  " + this.lastName +"  " +this.frequentFlyerno)
+}
 }
 var passenger=new Passenger("Jsck","Sparrow",102);
-// console.log(passenger.firstName + "  " + passenger.lastName +"  " +passenger.frequentFlyerno)
-console.log(passenger)
+var passenger2=new Passenger("harray","potter",102);
+passenger2.display()
+
+
 
 
 
