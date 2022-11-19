@@ -17,45 +17,55 @@ var Person = /** @class */ (function () {
     function Person() {
     }
     Person.prototype.work = function () {
-        console.log("I am from person class");
+        console.log("Name:".concat(this.name));
     };
     return Person;
 }());
 var Student1 = /** @class */ (function (_super) {
     __extends(Student1, _super);
-    function Student1() {
-        return _super !== null && _super.apply(this, arguments) || this;
+    function Student1(student_class, name) {
+        var _this = _super.call(this) || this;
+        _this.student_class = student_class;
+        _this.name = name;
+        return _this;
     }
     Student1.prototype.work = function () {
-        console.log("I am from student class");
+        _super.prototype.work.call(this);
+        console.log("id: ".concat(this.student_class, "  Name:").concat(this.name));
     };
     return Student1;
 }(Person));
-var Employee = /** @class */ (function (_super) {
-    __extends(Employee, _super);
-    function Employee() {
-        return _super !== null && _super.apply(this, arguments) || this;
+var Employee6 = /** @class */ (function (_super) {
+    __extends(Employee6, _super);
+    function Employee6(emp_salary, employee_depth, name) {
+        var _this = _super.call(this) || this;
+        //  this.student_class=student_class;
+        _this.name = name;
+        _this.emp_salary = emp_salary;
+        _this.employee_depth = employee_depth;
+        return _this;
     }
-    Employee.prototype.work = function () {
-        console.log("I am from employee class");
+    Employee6.prototype.work = function () {
+        _super.prototype.work.call(this);
+        console.log("Name:".concat(this.name, " EmpDept: ").concat(this.employee_depth, " EmpSalry:").concat(this.emp_salary));
     };
-    return Employee;
+    return Employee6;
 }(Person));
 var Trainer = /** @class */ (function (_super) {
     __extends(Trainer, _super);
-    function Trainer() {
-        return _super !== null && _super.apply(this, arguments) || this;
+    function Trainer(trainer_salary) {
+        var _this = _super.call(this) || this;
+        _this.trainer_salary = trainer_salary;
+        return _this;
+        //  this.student_class=student_class
     }
     Trainer.prototype.work = function () {
-        console.log("I am from trainer class");
+        console.log("Trainer salary:".concat(this.trainer_salary, " "));
     };
     return Trainer;
 }(Person));
-var person = new Person();
-var student = new Student1();
-var employee = new Employee();
-var trainer = new Trainer();
-person.work();
-student.work();
-employee.work();
-trainer.work();
+var person = [new Student1(1, "Pranisha"), new Employee6(30000, "IT", "Vishal"), new Trainer(50000)];
+for (var _i = 0, person_1 = person; _i < person_1.length; _i++) {
+    var iterator = person_1[_i];
+    iterator.work();
+}
