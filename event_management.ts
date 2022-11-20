@@ -1,9 +1,7 @@
 class Organizer {
     public id:number;
     public Name:string;
-    constructor(){
-        
-    }
+
     public display():void{
        console.log(`ID: ${this.id} Name: ${this.Name}`);
 
