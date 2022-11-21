@@ -15,9 +15,11 @@ var __extends = (this && this.__extends) || (function () {
 })();
 var Organizer = /** @class */ (function () {
     function Organizer() {
+        this.id = 1;
+        this.Name = "yash";
+        console.log("ID: ".concat(this.id, " Name: ").concat(this.Name));
     }
     Organizer.prototype.display = function () {
-        console.log("ID: ".concat(this.id, " Name: ").concat(this.Name));
     };
     return Organizer;
 }());
@@ -54,11 +56,8 @@ var Venue = /** @class */ (function (_super) {
     };
     return Venue;
 }(Organizer));
-var organizer = new Array(new Event1(10, "Weeding", "Ring Ceremony", 4), new Venue(1, "Paradise Garden", "landscape area", 4, "Sangola"));
+var organizer = new Array(new Event1(10, "Weeding", "Ring Ceremony", 4), new Venue(11, "Paradise Garden", "landscape area", 4, "Sangola"));
 for (var _i = 0, organizer_1 = organizer; _i < organizer_1.length; _i++) {
     var iterator = organizer_1[_i];
     iterator.display();
 }
-//  let organizer=new Event1(102,"Pradnya Kolase","IT Champ",11)
-// let organizer=new Venue(102,"Pradnya","IT Champ",11,"Sangola");
-// console.log(organizer.display());
