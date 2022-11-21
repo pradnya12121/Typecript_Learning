@@ -5,23 +5,25 @@ interface IOrganizer{
 }
 
 
-class Organizer implements IOrganizer {
-     public id:number=1
-    public Name:string="yash";
-    constructor(){
-         console.log(`ID: ${this.id} Name: ${this.Name}`);
-    }
+class Organizer  {
+      public id:number=1
+     public Name:string="yash";
+     constructor(){
+    
+        console.log(`ID: ${this.id} Name: ${this.Name}`);
+     }
 
      public display():void{
        
-
     }
 }
-class Event1 extends Organizer{
+class Event1 implements IOrganizer{
+    id: number;
+    Name:string;
     public Description:string;
     public SetTime:number;
     constructor(id:number,Name:string,Description:string,SetTime:number){
-         super();//calling app property of parent class
+        //  super()//calling app property of parent class
         this.id=id;
         this.Name=Name;
         this.Description=Description;
@@ -29,7 +31,7 @@ class Event1 extends Organizer{
 
     }
     public display(): void {
-        super.display()
+        // super.display()
          console.log(`Event id: ${this.id}  Event Name: ${this.Name}   Event Description: ${this.Description}   Event time: ${this.SetTime}`)
         
     }

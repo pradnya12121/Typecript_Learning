@@ -23,22 +23,20 @@ var Organizer = /** @class */ (function () {
     };
     return Organizer;
 }());
-var Event1 = /** @class */ (function (_super) {
-    __extends(Event1, _super);
+var Event1 = /** @class */ (function () {
     function Event1(id, Name, Description, SetTime) {
-        var _this = _super.call(this) || this;
-        _this.id = id;
-        _this.Name = Name;
-        _this.Description = Description;
-        _this.SetTime = SetTime;
-        return _this;
+        //  super()//calling app property of parent class
+        this.id = id;
+        this.Name = Name;
+        this.Description = Description;
+        this.SetTime = SetTime;
     }
     Event1.prototype.display = function () {
-        _super.prototype.display.call(this);
+        // super.display()
         console.log("Event id: ".concat(this.id, "  Event Name: ").concat(this.Name, "   Event Description: ").concat(this.Description, "   Event time: ").concat(this.SetTime));
     };
     return Event1;
-}(Organizer));
+}());
 var Venue = /** @class */ (function (_super) {
     __extends(Venue, _super);
     function Venue(id, Name, Description, SetTime, address) {
